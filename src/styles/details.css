@@ -1,0 +1,29 @@
+.container {
+  margin-top: 2%;
+  justify-content: center;
+  display: flex;
+}
+
+.imgDetails {
+  width: 70%;
+  border: 2px solid #413e3e;
+  -webkit-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
+  box-shadow: 2px 15px -12px rgba(0, 0, 0, 0.57);
+}
+
+.img-details,
+.summary,
+.title {
+  text-align: center;
+}
+
+.author-name {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.details-date {
+  text-align: right;
+  font-weight: bold;
+}

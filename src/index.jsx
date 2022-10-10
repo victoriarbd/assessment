@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './styles/index.css';
 
 /**
  * This file can be ignored, please work in ./components/App.jsx
