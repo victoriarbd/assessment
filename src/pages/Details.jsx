@@ -6,9 +6,9 @@ const Details = () => {
   const location = useLocation();
   return (
     <div>
-      <div class="container">
-        <div class="row">
-          <div class="col">
+      <div className="container">
+        <div className="row">
+          <div className="col">
             <div className="img-details">
               <img
                 className="imgDetails"
@@ -20,11 +20,11 @@ const Details = () => {
               </div>
             </div>
           </div>
-          <div class="col align-self-center">
+          <div className="col align-self-center">
             <h3 className="title"> {location.state.props.title}</h3>
             <p className="summary">{location.state.props.summary}</p>
           </div>
-          <div class="col align-self-center">
+          <div className="col align-self-center">
             <ul>
               <li> Categorie(s) :</li>
               {location.state.props.categories.map((category) => (

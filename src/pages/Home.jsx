@@ -75,7 +75,7 @@ const Home = () => {
   return (
     isMount && (
       <>
-        <div className="home-container">
+        <div>
           <div className="selectDiv">
             <Select
               isMulti
@@ -91,7 +91,7 @@ const Home = () => {
             {visible < selectedPost.length ? (
               <button
                 type="button"
-                class="btn btn-outline-dark"
+                className="btn btn-outline-dark"
                 onClick={showMorePost}
               >
                 {visible > selectedPost.length ? '' : 'Load more'}
@@ -101,7 +101,7 @@ const Home = () => {
             )}
           </div>
         </div>
-        <div class="footer-copyright text-center py-3">
+        <div className="footer-copyright text-center py-3">
           © 2022 Copyright : Victoria Arbaoui
         </div>
       </>
