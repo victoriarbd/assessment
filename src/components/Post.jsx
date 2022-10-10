@@ -21,7 +21,6 @@ const Post = (props) => {
             <img src={props.post.author.avatar} alt="avatar" />
             {props?.post.author.name}
           </div>
-
           <p className="dateHome">
             {new Date(props.post.publishDate).toLocaleDateString('en-US')}
           </p>

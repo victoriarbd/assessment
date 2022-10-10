@@ -17,7 +17,7 @@ const Home = () => {
   //verify if the elements are mounted into the DOM
   const [isMount, setIsMount] = useState(false);
 
-  //increase the number of post we can see
+  //increases the number of posts displayed
   const showMorePost = () => {
     setVisible((prevValue) => prevValue + 4);
   };
@@ -28,7 +28,6 @@ const Home = () => {
     axios.get('/api/posts').then((res) => {
       setPosts(res.data.posts);
       setSelectedPost(res.data.posts);
-
       res.data.posts.forEach((post) => {
         post.categories.forEach((category) => {
           if (!list.includes(category.name)) {
@@ -44,9 +43,9 @@ const Home = () => {
     });
   }, []);
 
-  /* permit to change the list of selected categories to filter posts. 
-    if nothing is selected it shows every posts
-  */
+  // permit to change the list of selected categories to filter posts.
+  // if nothing is selected it shows every posts
+
   useEffect(() => {
     if (selectedCat.length > 0) {
       filterPosts();
@@ -55,7 +54,7 @@ const Home = () => {
     }
   }, [selectedCat]);
 
-  //filter posts for a given category
+  //filters posts by categories
   const filterPosts = () => {
     let listPosts = [];
     for (let post of posts) {
@@ -87,7 +86,6 @@ const Home = () => {
               onChange={setSelectedCat}
             />
           </div>
-
           <List posts={selectedPost} visible={visible} />
           <div className="buttonDiv">
             {visible < selectedPost.length ? (
