@@ -5,6 +5,7 @@ import '../styles/post.css';
 const Post = (props) => {
   const navigate = useNavigate();
 
+  //navigate to the detail page of the post
   const handleClick = () => {
     navigate('/detail', {
       state: { props: props.post },
